@@ -1,0 +1,92 @@
+@import "../variables";
+@import "shapes";
+
+@mixin swatch($diameter, $color) {
+    @include circle($diameter, $color);
+    @include swatch-check-mark();
+
+    border: 0.063em solid rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    margin-right: 0.313em;
+    position: relative;
+
+    // swatch-filter x mark to undo a filter
+    i.fa-times-circle {
+        background: $white;
+        border-radius: 50%;
+        height: 0.75em;
+        line-height: 0.8em;
+        width: 0.8em;
+    }
+}
+
+@mixin swatch-check-mark() {
+    &.color-value[data-selected="true"]::after {
+        color: $black;
+        content: "\f058";
+        display: table-caption;
+        font-family: "FontAwesome";
+        font-size: 1.625em;
+        left: 0.295em;
+        position: absolute;
+    }
+
+    &.color-value.selected::after {
+        background: $white;
+        border-radius: 50%;
+        color: $black;
+        content: "\f058";
+        display: table-caption;
+        font-family: "FontAwesome";
+        font-size: 1.625em;
+        height: 0.75em;
+        left: 0.31em;
+        line-height: 0.8em;
+        position: absolute;
+        top: 0.35em;
+        width: 0.8em;
+    }
+}
+
+$swatch-colors: (
+    "beige": #f5f5dc,
+    "black": $black,
+    "blue": $blue,
+    "brown": #a52a2a,
+    "green": $green,
+    "grey": #8f979d,
+    "navy": #000080,
+    "orange": #ffa500,
+    "pink": #fe249a,
+    "purple": #800080,
+    "red": #f00,
+    "white": $white,
+    "yellow": #ff0
+);
+
+@each $color in map-keys($swatch-colors) {
+    $colorValue: #{map-get($swatch-colors, $color)};
+
+    .swatch-circle-#{$color} {
+        @include circle(2.5em, $colorValue);
+
+        display: block;
+        position: relative;
+
+        &.disabled {
+            opacity: 0.2;
+        }
+    }
+
+    .swatch-filter-#{$color} {
+        @include circle(1.38em, $colorValue);
+
+        background-color: $colorValue;
+        display: block;
+        position: relative;
+
+        &.disabled {
+            opacity: 0.2;
+        }
+    }
+}

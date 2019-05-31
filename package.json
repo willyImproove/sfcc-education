@@ -1,0 +1,61 @@
+{
+  "name": "improove-mfra-base",
+  "version": "1.0.0",
+  "description": "Improove MFRA Base",
+  "main": "index.js",
+  "engines": {
+    "node": ">=6.0"
+  },
+  "scripts": {
+    "webpack:prd": "webpack --env prd",
+    "webpack:dev": "webpack --env dev --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org:username/your-project.git"
+  },
+  "author": "Selman Guney <selman@improove.se>",
+  "license": "UNLICENSED",
+  "private": true,
+  "homepage": "https://bitbucket.org/username/your-project",
+  "dependencies": {
+    "bootstrap": "4.0.0",
+    "cleave.js": "^1.0.2",
+    "flag-icon-css": "^3.0.0",
+    "font-awesome": "^4.6.3",
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {
+    "ajv": "^5.5.2",
+    "babel": "^6.23.0",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-module-resolver": "^2.7.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "clean-webpack-plugin": "^0.1.16",
+    "css-loader": "^0.28.5",
+    "eslint": "^4.13.1",
+    "eslint-config-airbnb-base": "^11.3.2",
+    "eslint-import-resolver-babel-module": "^3.0.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-sitegenesis": "^1.0.0",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^0.11.2",
+    "fs-extra": "^4.0.3",
+    "glob": "^7.1.2",
+    "node-sass": "^4.5.3",
+    "on-build-webpack": "^0.1.0",
+    "postcss": "^6.0.10",
+    "proxyquire": "^1.8.0",
+    "sass-loader": "^6.0.6",
+    "sgmf-scripts": "^1.1.2",
+    "stylelint": "^9.2.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-scss": "^3.1.0",
+    "stylelint-webpack-plugin": "^0.10.4",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.10.0",
+    "webpack-build-notifier": "^0.1.23"
+  }
+}

@@ -1,0 +1,12 @@
+/node_modules/
+cartridges/**/cartridge/static/default/js
+cartridges/**/cartridge/static/default/css
+cartridges/**/cartridge/static/default/scss
+*.map
+*.css
+.DS_Store
+/dw.json
+/cartridges/dw.json
+.vscode/
+.idea/
+.settings/
