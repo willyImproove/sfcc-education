@@ -49,7 +49,7 @@
     "postcss": "^6.0.10",
     "proxyquire": "^1.8.0",
     "sass-loader": "^6.0.6",
-    "sgmf-scripts": "^1.1.2",
+    "sgmf-scripts": "^2.4.2",
     "stylelint": "^9.2.0",
     "stylelint-config-standard": "^18.2.0",
     "stylelint-scss": "^3.1.0",
